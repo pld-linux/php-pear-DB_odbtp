@@ -8,13 +8,15 @@ Summary:	%{_pearname} - DB interface for ODBTP
 Summary(pl):	%{_pearname} - interfejs DB do ODBTP
 Name:		php-pear-%{_pearname}
 Version:	1.0.2
-Release:	2
+Release:	2.2
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	2eca8fa3d8592fcae7e1aca861cca7c0
 URL:		http://pear.php.net/package/DB_odbtp/
-BuildRequires:	rpm-php-pearprov >= 4.0.2-98
+BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+# FIXME: or php-odbtp?
+Requires:	php-pecl-odbtp
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -34,18 +36,19 @@ Win32-ODBC.
 Ta klasa ma w PEAR status: %{_status}.
 
 %prep
-%setup -q -c
+%pear_package_setup
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-
-install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install -d $RPM_BUILD_ROOT%{php_pear_dir}
+%pear_package_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}/{docs,examples}
+%doc install.log
+%doc docs/%{_pearname}/{docs/*,examples}
+%{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/*.php
