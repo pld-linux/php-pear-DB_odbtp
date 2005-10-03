@@ -8,14 +8,15 @@ Summary:	%{_pearname} - DB interface for ODBTP
 Summary(pl):	%{_pearname} - interfejs DB do ODBTP
 Name:		php-pear-%{_pearname}
 Version:	1.0.3
-Release:	1
+Release:	1.2
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	fd8781ecaa6c07621f5591190d526817
 URL:		http://pear.php.net/package/DB_odbtp/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-Requires:	php-pecl-odbtp
+Requires:	php-odbtp
+Requires:	php-pear-DB
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
