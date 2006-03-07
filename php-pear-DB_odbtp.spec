@@ -14,6 +14,7 @@ Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	fd8781ecaa6c07621f5591190d526817
 URL:		http://pear.php.net/package/DB_odbtp/
+BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-odbtp
 Requires:	php-pear-DB
