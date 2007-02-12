@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - DB interface for ODBTP
-Summary(pl):	%{_pearname} - interfejs DB do ODBTP
+Summary(pl.UTF-8):   %{_pearname} - interfejs DB do ODBTP
 Name:		php-pear-%{_pearname}
 Version:	1.0.3
 Release:	2
@@ -30,9 +30,9 @@ accessible database from any platform.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-DB_odbtp to sterownik DB u¿ywaj±cy rozszerzenia ODBTP do po³±czenia z
-baz± danych. Umo¿liwia pracê z baz± danych udostêpnion± za pomoc±
+%description -l pl.UTF-8
+DB_odbtp to sterownik DB uÅ¼ywajÄ…cy rozszerzenia ODBTP do poÅ‚Ä…czenia z
+bazÄ… danych. UmoÅ¼liwia pracÄ™ z bazÄ… danych udostÄ™pnionÄ… za pomocÄ…
 Win32-ODBC.
 
 Ta klasa ma w PEAR status: %{_status}.
