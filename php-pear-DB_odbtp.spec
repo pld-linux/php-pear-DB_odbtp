@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - DB interface for ODBTP
-Summary(pl.UTF-8):   %{_pearname} - interfejs DB do ODBTP
+Summary(pl.UTF-8):	%{_pearname} - interfejs DB do ODBTP
 Name:		php-pear-%{_pearname}
 Version:	1.0.3
 Release:	2
